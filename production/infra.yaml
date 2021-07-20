@@ -12,12 +12,9 @@ spec:
     repoURL: https://github.com/vfarcic/crossplane-chicken-demo
     targetRevision: HEAD
   destination:
-    namespace: infra
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
       allowEmpty: true
-    syncOptions:
-    - CreateNamespace=true

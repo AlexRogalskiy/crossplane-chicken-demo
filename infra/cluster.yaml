@@ -1,5 +1,6 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
+# kind: ClusterClaim
+kind: CompositeCluster
 metadata:
   name: a-team
   namespace: infra
@@ -7,12 +8,12 @@ metadata:
     cluster-owner: vfarcic
 spec:
   id: a-team
-  compositionRef:
-    name: cluster-aws
-  # compositionSelector:
-  #   matchLabels:
-  #     provider: aws
-  #     cluster: eks
+  # compositionRef:
+  #   name: cluster-aws
+  compositionSelector:
+    matchLabels:
+      provider: aws
+      cluster: eks
   parameters:
     # Possible values small, medium, large
     nodeSize: small

@@ -1,6 +1,6 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
-# kind: CompositeCluster
+# kind: ClusterClaim
+kind: CompositeCluster
 metadata:
   name: a-team
   # namespace: infra

@@ -3,7 +3,7 @@ apiVersion: devopstoolkitseries.com/v1alpha1
 kind: CompositeCluster
 metadata:
   name: a-team
-  namespace: infra
+  # namespace: infra
   labels:
     cluster-owner: vfarcic
 spec:

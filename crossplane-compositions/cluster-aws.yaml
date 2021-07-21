@@ -35,8 +35,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
     - fromFieldPath: spec.parameters.version
       toFieldPath: spec.forProvider.version
     - fromFieldPath: metadata.uid
@@ -84,8 +84,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
     - fromFieldPath: spec.parameters.nodeSize
       toFieldPath: spec.forProvider.instanceTypes[0]
       transforms:
@@ -138,12 +138,12 @@ spec:
         - type: string
           string:
             fmt: "%s-controlplane"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-controlplane"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-controlplane"
   - name: iamrole-nodegroup
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -177,12 +177,12 @@ spec:
         - type: string
           string:
             fmt: "%s-nodegroup"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-nodegroup"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-nodegroup"
   - name: iamattachment-controlplane
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -201,12 +201,12 @@ spec:
         - type: string
           string:
             fmt: "%s-controlplane"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-controlplane"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-controlplane"
   - name: iamattachment-service
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -225,12 +225,12 @@ spec:
         - type: string
           string:
             fmt: "%s-service"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-service"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-service"
   - name: iamattachment-worker
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -249,12 +249,12 @@ spec:
         - type: string
           string:
             fmt: "%s-worker"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-worker"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-worker"
   - name: iamattachment-cni
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -273,12 +273,12 @@ spec:
         - type: string
           string:
             fmt: "%s-cni"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-cni"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-cni"
   - name: iamattachment-registry
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -297,12 +297,12 @@ spec:
         - type: string
           string:
             fmt: "%s-registry"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-registry"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-registry"
   - name: vpc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -315,8 +315,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
   - name: sc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -337,8 +337,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
   - name: subnet-nodepool-1a
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -365,12 +365,12 @@ spec:
         - type: string
           string:
             fmt: "%s-1a"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-1a"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-1a"
   - name: subnet-nodepool-1b
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -397,12 +397,12 @@ spec:
         - type: string
           string:
             fmt: "%s-1b"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-1b"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-1b"
   - name: subnet-nodepool-1c
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -429,12 +429,12 @@ spec:
         - type: string
           string:
             fmt: "%s-1c"
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
-      transforms:
-        - type: string
-          string:
-            fmt: "%s-1c"
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
+    #   transforms:
+    #     - type: string
+    #       string:
+    #         fmt: "%s-1c"
   - name: gateway
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -447,8 +447,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
   - name: routetable
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -481,8 +481,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
   - name: helm
     base:
       apiVersion: helm.crossplane.io/v1beta1
@@ -495,8 +495,8 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
     - fromFieldPath: spec.writeConnectionSecretToRef.namespace
       toFieldPath: spec.credentials.secretRef.namespace
     - fromFieldPath: metadata.uid
@@ -522,7 +522,7 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
-    - fromFieldPath: spec.id
-      toFieldPath: metadata.annotations[crossplane.io/external-name]
+    # - fromFieldPath: spec.id
+    #   toFieldPath: metadata.annotations[crossplane.io/external-name]
     - fromFieldPath: spec.id
       toFieldPath: spec.providerConfigRef.name

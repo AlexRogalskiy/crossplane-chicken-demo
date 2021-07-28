@@ -12,6 +12,15 @@ spec:
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
+  name: provider-azure
+spec:
+  package: crossplane/provider-azure:v0.16.1
+
+---
+
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
   name: provider-helm
 spec:
   package: crossplane/provider-helm:v0.5.0

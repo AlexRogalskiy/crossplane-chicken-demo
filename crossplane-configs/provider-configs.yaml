@@ -8,7 +8,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: upbound-system
       name: aws-creds
       key: creds
 
@@ -22,6 +22,6 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: upbound-system
       name: azure-creds
       key: creds
